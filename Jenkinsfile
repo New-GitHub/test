@@ -9,7 +9,7 @@ pipeline {
                DEBUG_FLAGS = '-g'
             }
          steps {
-            sh "${CC} ${DEBUG_FLAGS}"
+            echo "${CC} ${DEBUG_FLAGS}"
          }
       }
    }
