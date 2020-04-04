@@ -20,8 +20,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'pwd'
-                sh 'sudo bash ./jenkins/scripts/deliver.sh'
+                sh 'sudo pwd'
+                sh "sudo bash $WORKSPACE/jenkins/scripts/deliver.sh"
             }
         }
     }
