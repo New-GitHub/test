@@ -1,32 +1,12 @@
-pipeline{
-    agent any
-    stages{
-        stage("A"){
-            steps{
-                echo "========executing A========"
-            }
-            post{
-                always{
-                    echo "========always========"
-                }
-                success{
-                    echo "========A executed successfully========"
-                }
-                failure{
-                    echo "========A execution failed========"
-                }
-            }
-        }
-    }
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
-        }
-    }
+pipeline {
+   agent any
+   stages {
+      stage ('Example') {
+         steps {
+            echo "Running ${env.BUID_NUMBER} on ${env.JENKINS_URL}"
+            echo "Running ${BUID_NUMBER} on ${JENKINS_URL}"
+            echo "Running $env.BUID_NUMBER on $env.JENKINS_URL"
+         }
+      }
+   }
 }
