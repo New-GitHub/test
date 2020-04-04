@@ -1,15 +1,9 @@
 pipeline {
    agent any
-   environment {
-      CC = 'clang'
-   }
    stages {
-      stage ('Example') {
-            environment {
-               DEBUG_FLAGS = '-g'
-            }
+      stage ('deploy') {
          steps {
-            echo "${CC} ${DEBUG_FLAGS}"
+            input message: "发布或停止"
          }
       }
    }
