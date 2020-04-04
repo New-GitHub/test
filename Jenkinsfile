@@ -3,9 +3,9 @@ pipeline {
    stages {
       stage ('Example') {
          steps {
-            echo "Running ${env.BUID_NUMBER} on ${env.JENKINS_URL}"
-            echo "Running ${BUID_NUMBER} on ${JENKINS_URL}"
-            echo "Running $env.BUID_NUMBER on $env.JENKINS_URL"
+            echo "Running ${env.BUILD_NUMBER} on ${env.JENKINS_URL}"
+            echo "Running ${BUILD_NUMBER} on ${JENKINS_URL}"
+            echo "Running $env.BUILD_NUMBER on $env.JENKINS_URL"
          }
       }
    }
